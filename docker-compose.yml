@@ -4,7 +4,5 @@ services:
 
   minecraft:
     image: cscheide/pocketmine-mp:latest
-    volumes:
-    - ./data:/data
     ports:
     - "19132:19132/udp"
