@@ -6,3 +6,13 @@ services:
     image: cscheide/pocketmine-mp:latest
     ports:
     - "19132:19132/udp"
+
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    ports:
+      - "80:9000"
+    command: -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
