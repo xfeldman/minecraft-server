@@ -4,6 +4,7 @@ services:
 
   minecraft:
     image: cscheide/pocketmine-mp:latest
+    container_name: minecraft
     ports:
     - "19132:19132/udp"
 
